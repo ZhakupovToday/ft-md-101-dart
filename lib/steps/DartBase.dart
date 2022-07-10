@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:ft_md_101_dart/steps/ClassInstance.dart';
+import 'package:ft_md_101_dart/steps/tasks/Taks2.dart';
 import 'package:ft_md_101_dart/steps/tasks/Task1.dart';
 import 'package:ft_md_101_dart/steps/utils/DartAbstractChild.dart';
 import 'package:ft_md_101_dart/steps/utils/DartChild.dart';
@@ -34,7 +35,8 @@ class DartBase {
     // _stepInterface();
     // _stepAbstract();
     // _stepException();
-    Task1().run();
+    // Task1().run();
+    Task2().run();
   }
 
   void _stepConf() {
