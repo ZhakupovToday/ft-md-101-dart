@@ -5,6 +5,7 @@ import 'package:ft_md_101_dart/steps/utils/DartAbstractChild.dart';
 import 'package:ft_md_101_dart/steps/utils/DartChild.dart';
 import 'package:ft_md_101_dart/steps/utils/DartConstructor.dart';
 import 'package:ft_md_101_dart/steps/utils/DartEnum.dart';
+import 'package:ft_md_101_dart/steps/utils/DartExceptionExample.dart';
 import 'package:ft_md_101_dart/steps/utils/DartFinal.dart';
 import 'package:ft_md_101_dart/steps/utils/DartInterfaceChild.dart';
 import 'package:ft_md_101_dart/steps/utils/DartMethod.dart';
@@ -31,6 +32,7 @@ class DartBase {
     _stepEnum();
     _stepInterface();
     _stepAbstract();
+    _stepException();
   }
 
   void _stepConf() {
@@ -175,18 +177,21 @@ class DartBase {
 
   void _stepEnum() {
     var status = DartEnum.NEW;
-print('_stepEnum: $status');
+    print('_stepEnum: $status');
   }
 
-  void _stepInterface(){
+  void _stepInterface() {
     DartInterfaceChild dlc = DartInterfaceChild();
     dlc.printMe();
   }
 
-void _stepAbstract(){
+  void _stepAbstract() {
     DartAbstractChild dac = DartAbstractChild();
     dac.PrintMe();
-}
+  }
 
+  void _stepException() {
+    DartExceptionExample dee = DartExceptionExample();
+    dee.run();
+  }
 }
-
