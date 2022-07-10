@@ -18,6 +18,7 @@ class DartBase {
     _stepSignature();
     _stepInheritance();
     _stepConditionalOperator();
+    _stepArray();
   }
 
   void _stepConf() {
@@ -40,7 +41,6 @@ class DartBase {
     DartBase db = DartBase();
     db._stepConf();
   }
-
 
   void _stepClassInstance() {
     ClassInstance ci = ClassInstance();
@@ -97,4 +97,31 @@ class DartBase {
       print('_stepConditionalOperator: $IntVar нечетное');
     }
     }
+  }
+
+  void _stepArray(){
+  var array =[];
+  array.add(1);
+  array.add('String value');
+  print('_stepArray: array');
+
+  List<String> stringArray = [];
+  stringArray = <String>[];
+
+  stringArray.add("value");
+  print(stringArray);
+
+  stringArray.removeAt(0);
+  print(stringArray);
+
+
+  stringArray.add("value");
+  stringArray.add("value");
+  stringArray.add("value");
+  stringArray.add("value");
+  stringArray.forEach((element) {
+    print('$element');
+  });
+
+  
   }
