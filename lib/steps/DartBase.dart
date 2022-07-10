@@ -19,6 +19,7 @@ class DartBase {
     _stepInheritance();
     _stepConditionalOperator();
     _stepArray();
+    _stepLoop();
   }
 
   void _stepConf() {
@@ -36,7 +37,6 @@ class DartBase {
 
     double sum = intVar + doubleVar;
     print('_stepDataType: $sum');
-
 
     DartBase db = DartBase();
     db._stepConf();
@@ -93,35 +93,49 @@ class DartBase {
     }
     if (IntVar % 2 == 0) {
       print('_stepConditionalOperator: $IntVar четное');
-    }else {
+    } else {
       print('_stepConditionalOperator: $IntVar нечетное');
     }
+  }
+
+  void _stepArray() {
+    var array = [];
+    array.add(1);
+    array.add('String value');
+    print('_stepArray: array');
+
+    List<String> stringArray = [];
+    stringArray = <String>[];
+
+    stringArray.add("value");
+    print(stringArray);
+
+    stringArray.removeAt(0);
+    print(stringArray);
+
+    stringArray.add("value");
+    stringArray.add("value");
+    stringArray.add("value");
+    stringArray.add("value");
+    stringArray.forEach((element) {
+      print('$element');
+    });
+  }
+
+  void _stepLoop() {
+    List<int> intArray = [];
+    for (int i = 0; i < 100; i++) {
+      intArray.add(Random().nextInt(100));
     }
+    print(intArray);
+
+    List<int> onlyEven = [];
+    for (int el in intArray) {
+      if (el % 2 == 0) {
+        onlyEven.add(el);
+      }
+    }
+    print(onlyEven);
+
   }
-
-  void _stepArray(){
-  var array =[];
-  array.add(1);
-  array.add('String value');
-  print('_stepArray: array');
-
-  List<String> stringArray = [];
-  stringArray = <String>[];
-
-  stringArray.add("value");
-  print(stringArray);
-
-  stringArray.removeAt(0);
-  print(stringArray);
-
-
-  stringArray.add("value");
-  stringArray.add("value");
-  stringArray.add("value");
-  stringArray.add("value");
-  stringArray.forEach((element) {
-    print('$element');
-  });
-
-  
-  }
+}
