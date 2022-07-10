@@ -1,6 +1,7 @@
 import 'package:ft_md_101_dart/steps/ClassInstance.dart';
 import 'package:ft_md_101_dart/steps/utils/DartMethod.dart';
 import 'package:ft_md_101_dart/steps/utils/DartPackage.dart';
+import 'package:ft_md_101_dart/steps/utils/DartSignature.dart';
 
 class DartBase {
   void run(){
@@ -11,6 +12,7 @@ class DartBase {
     _stepClassInstance();
     _stepPackage();
     _stepMethod();
+    _stepSignature();
   }
 
   void _stepConf(){
@@ -48,5 +50,15 @@ class DartBase {
   void _stepMethod(){
     var dn = DartMethod();
     dn.run();
+  }
+
+  void _stepSignature(){
+    var db = DartSignature("first var", "second var");
+    db.run();
+    db.setAndRun("first after set", "second after set");
+
+    db.first = "first after set";
+    db.second = "second after set";
+    db.run();
   }
 }
