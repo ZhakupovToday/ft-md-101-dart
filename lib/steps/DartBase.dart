@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:ft_md_101_dart/steps/ClassInstance.dart';
 import 'package:ft_md_101_dart/steps/utils/DartChild.dart';
 import 'package:ft_md_101_dart/steps/utils/DartConstructor.dart';
+import 'package:ft_md_101_dart/steps/utils/DartFinal.dart';
 import 'package:ft_md_101_dart/steps/utils/DartMethod.dart';
 import 'package:ft_md_101_dart/steps/utils/DartPackage.dart';
 import 'package:ft_md_101_dart/steps/utils/DartSignature.dart';
@@ -22,7 +23,8 @@ class DartBase {
     _stepArray();
     _stepLoop();
     _stepSwitch();
-    _sterConstructor();
+    _stepConstructor();
+    _stepFinal();
   }
 
   void _stepConf() {
@@ -155,9 +157,14 @@ class DartBase {
     }
   }
 
-  void _sterConstructor(){
+  void _stepConstructor(){
   DartConstructor dc = DartConstructor(1,"str");
   dc.run();
+  }
+
+  void _stepFinal(){
+    DartFinal dc = DartFinal();
+    dc.run();
   }
 
 }
