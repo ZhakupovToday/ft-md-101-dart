@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:ft_md_101_dart/steps/ClassInstance.dart';
+import 'package:ft_md_101_dart/steps/tasks/Task1.dart';
 import 'package:ft_md_101_dart/steps/utils/DartAbstractChild.dart';
 import 'package:ft_md_101_dart/steps/utils/DartChild.dart';
 import 'package:ft_md_101_dart/steps/utils/DartConstructor.dart';
@@ -16,23 +17,24 @@ class DartBase {
   void run() {
     print('DartBase: Hello World');
 
-    _stepConf();
-    _stepDataType();
-    _stepClassInstance();
-    _stepPackage();
-    _stepMethod();
-    _stepSignature();
-    _stepInheritance();
-    _stepConditionalOperator();
-    _stepArray();
-    _stepLoop();
-    _stepSwitch();
-    _stepConstructor();
-    _stepFinal();
-    _stepEnum();
-    _stepInterface();
-    _stepAbstract();
-    _stepException();
+    // _stepConf();
+    // _stepDataType();
+    // _stepClassInstance();
+    // _stepPackage();
+    // _stepMethod();
+    // _stepSignature();
+    // _stepInheritance();
+    // _stepConditionalOperator();
+    // _stepArray();
+    // _stepLoop();
+    // _stepSwitch();
+    // _stepConstructor();
+    // _stepFinal();
+    // _stepEnum();
+    // _stepInterface();
+    // _stepAbstract();
+    // _stepException();
+    Task1().run();
   }
 
   void _stepConf() {
