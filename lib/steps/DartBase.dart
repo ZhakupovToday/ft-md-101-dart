@@ -7,6 +7,7 @@ import 'package:ft_md_101_dart/steps/tasks/Task3.dart';
 import 'package:ft_md_101_dart/steps/tasks/Task4.dart';
 import 'package:ft_md_101_dart/steps/tasks/Task5.dart';
 import 'package:ft_md_101_dart/steps/tasks/Task6.dart';
+import 'package:ft_md_101_dart/steps/tasks/Task7.dart';
 import 'package:ft_md_101_dart/steps/utils/DartAbstractChild.dart';
 import 'package:ft_md_101_dart/steps/utils/DartChild.dart';
 import 'package:ft_md_101_dart/steps/utils/DartConstructor.dart';
@@ -44,7 +45,9 @@ class DartBase {
     // Task3().run();
     // Task4().run();
     // Task5().run();
-    Task6().run();
+    // Task6().run();
+    Task7().run();
+
   }
 
   void _stepConf() {
