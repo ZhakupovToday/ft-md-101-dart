@@ -7,8 +7,8 @@ class RandomFromArray {
 
   RandomFromArray(this.extended_values, this.values, this.weights);
 }
-
-List<int> RandomArray(List<int> values, List<int> weights, List<int> ext_val) {
+int RandomArray(List<int> values, List<int> weights) {
+  List<int> ext_val = [];
   for (int i = 0; i < values.length; i++) {
     int one = values[i];
     int j = weights[i];
@@ -16,11 +16,11 @@ List<int> RandomArray(List<int> values, List<int> weights, List<int> ext_val) {
       ext_val.add(one);
     }
   }
+  var random = Random();
+  var IntVar = random.nextInt(ext_val.length);
+  int result = ext_val[IntVar];
+  return result;
 
-  return ext_val;
 }
 
-int getRandom(List<int> Array){
-  int j = 0;
-  return j;
-}
+
